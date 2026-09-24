@@ -1,0 +1,24 @@
+# Private or machine-specific material
+.env
+.env.*
+/private/
+/.local/
+/review-output/
+/GITHUB_PROJECT_CONTEXT*.md
+
+# Optional local development files
+.venv/
+__pycache__/
+*.py[cod]
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# A local discovery copy must not become a second canonical source
+/.agents/skills/skilltidy/
+
+# Local distribution output
+*.zip
+
+# Maintained source, documentation, tests, and synthetic fixtures remain tracked.
