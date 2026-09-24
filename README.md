@@ -18,7 +18,7 @@ You don't need a separate API key or Python to try it.
 ## Quick start
 
 1. Open this repository in Codex.
-2. Send the prompt below to review the supplied synthetic label-list skill.
+2. Send the prompt below to review the included sample skill for label lists.
 3. Read the proposed text and diff before deciding whether to save or apply it.
 
 ```text
@@ -30,7 +30,7 @@ including relevant supporting context. Preserve its rules and examples.
 For proposed edits, show both the complete candidate and the complete unified diff in the conversation. Do not change or save any files.
 ```
 
-To review your own skill, replace the fixture path with a disposable copy of
+To review your own skill, replace the fixture path with a temporary copy of
 your skill file. You can also select a folder with one clear main skill, name a
 section, or paste instructions. Supporting files provide context. Proposed edits
 stay within the selected file or section.
@@ -79,12 +79,12 @@ Approval to save a copy leaves the original alone.
 ## Three examples
 
 These examples use only this project's [synthetic fixtures](fixtures/README.md).
-The cleanup is a recorded result. The other two illustrate the expected review
-outcomes documented in the [test guide](tests/README.md).
+The first example comes from a recorded review. The other two show the expected
+review outcomes described in the [test guide](tests/README.md).
 
 ### Wordy explanation → PROPOSED
 
-A generated v1.3 review of the
+A v1.3 review of the
 [label-list fixture](fixtures/structured-output/SKILL.input.md) on 2026-09-14
 included this edit:
 
@@ -168,6 +168,6 @@ reports.
 
 Licensed under the [MIT License](LICENSE).
 
-Planned public repository: [parzival-000/skilltidy](https://github.com/parzival-000/skilltidy).
+GitHub: [parzival-000/skilltidy](https://github.com/parzival-000/skilltidy).
 
 Created by [parzival-000 / Parzival000](https://github.com/parzival-000).
