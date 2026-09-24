@@ -162,6 +162,9 @@ py -3 -B -m unittest discover -s tests -v
 ```
 
 Runtime changes also need focused behavior checks for the affected requirements.
+
+Found a problem? [Open an issue](https://github.com/parzival-000/skilltidy/issues) with a small example and what you expected to happen.
+
 For a problem report, include a small synthetic example, what you expected, what
 happened, and your model/settings if known. Leave private skill text out of shared
 reports.
