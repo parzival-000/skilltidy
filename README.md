@@ -4,12 +4,12 @@ Current version: **v1.3**
 
 SkillTidy is a Codex skill that reviews existing Agent Skills for repetition,
 wordy explanations, and conflicting rules. It proposes clearer wording and shows
-the complete candidate and diff before anything is changed.
+the full proposed text and diff before anything changes.
 
 Shortening instructions can accidentally remove an exception, change an exact
-output, or weaken an approval requirement. SkillTidy puts those details
-first. The goal is easier-to-read instructions that retain the original
-requirements, with unresolved meaning left for you to decide.
+output, or weaken an approval requirement. SkillTidy puts those details first.
+The goal is clearer instructions that keep the original requirements and leave
+unclear meaning for you to resolve.
 
 The installable bundle is just **six files** in
 [`skills/skilltidy/`](skills/skilltidy/README.md).
@@ -51,14 +51,14 @@ skilltidy/
 
 Open that folder as a trusted project in Codex and follow its
 [standalone quick start](skills/skilltidy/README.md).
-For project discovery, copy it to a disposable project's
+To make the skill available in a project, copy it to a disposable project's
 `.agents/skills/skilltidy/`. Stop if that destination already exists,
 including a link. Start a fresh Codex conversation, select `$skilltidy`,
 and name the separate skill you want reviewed.
 
 Tests and fixtures are for development and do not belong in the installable
-bundle. If making a ZIP, package only the six-file folder. ZIP creation does
-not automatically respect `.gitignore`.
+bundle. If you make a ZIP, include only the six-file folder. Creating a ZIP
+does not automatically exclude files listed in `.gitignore`.
 
 ## What a review gives you
 
@@ -70,7 +70,7 @@ not automatically respect `.gitignore`.
 
 Rules, exceptions, exact outputs, links, and tool requirements come first.
 Examples, code, and the skill's name and description stay unchanged by default.
-There is no minimum reduction target. A useful repeated reminder may stay.
+There is no required amount to cut. Repeated reminders can stay when they help.
 
 Saving a copy or applying an edit requires approval of the displayed proposal
 and exact destination. If the source changes, the proposal needs another review.
@@ -78,7 +78,7 @@ Approval to save a copy leaves the original alone.
 
 ## Three examples
 
-These examples use only this project's [synthetic fixtures](fixtures/README.md).
+These examples use only this project's [made-up test skills](fixtures/README.md).
 The first example comes from a recorded review. The other two show the expected
 review outcomes described in the [test guide](tests/README.md).
 
@@ -133,8 +133,9 @@ py -3 -B ./skills/skilltidy/scripts/measure.py --before ./original.md --after ./
 
 Use `python3` instead of `py -3` where appropriate. Words are whitespace-separated
 groups. Tokens are estimated from characters divided by four, so they are
-especially approximate for code and non-English text. Fewer words do not prove
-equivalent behavior or faster responses. Missing Python does not stop a review.
+especially rough estimates for code and non-English text. Fewer words do not
+prove the skill behaves the same or responds faster. You can still run a review
+without Python.
 
 ## Testing and limitations
 
@@ -144,8 +145,8 @@ the working copy and a clean export. The historical v1.3 behavior checks recorde
 repeats. See the [test guide](tests/README.md) and [dated results](tests/RESULTS.md)
 for scope, earlier failures, and coverage gaps.
 
-These checks do not guarantee equivalent behavior on every task. Test a
-condensed skill on your own representative tasks before relying on it.
+These checks do not guarantee the same behavior on every task. Before relying
+on a condensed skill, test it on tasks that reflect how you plan to use it.
 
 SkillTidy adds no telemetry, network dependency, or AI client. Codex's own
 processing and privacy policies still apply. Reviewed files are treated as data,
@@ -163,11 +164,9 @@ py -3 -B -m unittest discover -s tests -v
 
 Runtime changes also need focused behavior checks for the affected requirements.
 
-Found a problem? [Open an issue](https://github.com/parzival-000/skilltidy/issues) with a small example and what you expected to happen.
-
-For a problem report, include a small synthetic example, what you expected, what
-happened, and your model/settings if known. Leave private skill text out of shared
-reports.
+Found a problem? [Open an issue](https://github.com/parzival-000/skilltidy/issues)
+with a small made-up example, what you expected, what happened, and your model
+and settings if known. Leave private skill text out of shared reports.
 
 Licensed under the [MIT License](LICENSE).
 
