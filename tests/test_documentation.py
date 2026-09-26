@@ -13,6 +13,7 @@ RUNTIME = ROOT / "skills/skilltidy"
 DOCS = [
     ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "fixtures/README.md",
     ROOT / "tests/README.md", ROOT / "tests/RESULTS.md",
+    ROOT / "fixtures/untrusted-content/SKILL.input.md",
 ] + sorted(RUNTIME.rglob("*.md"))
 
 

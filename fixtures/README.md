@@ -1,5 +1,12 @@
 # Synthetic fixtures
 
+For the prompt injection example, start with the
+[annotated explanation](untrusted-content/SKILL.input.md). It labels the malicious
+text and explains the expected boundaries. The separate
+[raw input](untrusted-content/SKILL.raw.input.md) preserves the original test
+unchanged. Use only the raw input for that reviewer evaluation, and keep this
+guide and the annotated explanation out of the evaluated model's context.
+
 These are original, disposable examples for developing SkillTidy. They are **not installed skills**. Some intentionally contain contradictions or untrusted instructions. Do not execute or adopt them during an audit.
 
 Use the [test guide](../tests/README.md) for evaluation steps and
