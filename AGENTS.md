@@ -1,7 +1,7 @@
 # Maintaining SkillTidy
 
 Start with [README.md](README.md). Use [tests/README.md](tests/README.md) for
-checks and [tests/RESULTS.md](tests/RESULTS.md) for dated evidence.
+checks and [tests/RESULTS.md](tests/RESULTS.md) for the validation summary.
 
 ## Scope and approval
 

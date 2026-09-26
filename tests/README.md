@@ -1,6 +1,6 @@
 # Testing SkillTidy
 
-Current version: **v1.3**. Dated outcomes are in [RESULTS.md](RESULTS.md).
+Current version: **v1.3**. Validation is summarized in [RESULTS.md](RESULTS.md).
 
 ## Routine local checks
 

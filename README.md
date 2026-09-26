@@ -85,7 +85,7 @@ review outcomes described in the [test guide](tests/README.md).
 ### Wordy explanation → PROPOSED
 
 A v1.3 review of the
-[label-list fixture](fixtures/structured-output/SKILL.input.md) on 2026-09-14
+[label-list fixture](fixtures/structured-output/SKILL.input.md)
 included this edit:
 
 ```diff
@@ -98,7 +98,7 @@ included this edit:
 
 The full candidate preserved the validation rules, JSON format, and example.
 Across two edits, it went from **401 to 365 words**. See the
-[recorded results](tests/RESULTS.md) for measurements and validation details.
+[validation summary](tests/RESULTS.md) for the recorded result and limitations.
 
 ### Conflicting rules → REVIEW NEEDED
 
@@ -139,11 +139,11 @@ without Python.
 
 ## Testing and limitations
 
-The latest documented local checks on 2026-09-22 passed **36/36 tests** in both
-the working copy and a clean export. The historical v1.3 behavior checks recorded
-14 matched original/candidate pairs with 28 passing responses, including two
-repeats. See the [test guide](tests/README.md) and [dated results](tests/RESULTS.md)
-for scope, earlier failures, and coverage gaps.
+The documented automated checks passed **36/36 tests** in both the reviewed
+copy and a clean export. Historical v1.3 behavior checks recorded 14 matched
+original/candidate pairs with 28 passing responses, including two repeats.
+See the [test guide](tests/README.md) and [validation summary](tests/RESULTS.md)
+for scope and limitations.
 
 These checks do not guarantee the same behavior on every task. Before relying
 on a condensed skill, test it on tasks that reflect how you plan to use it.
