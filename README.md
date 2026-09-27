@@ -1,25 +1,37 @@
 # SkillTidy
 
+**Clean up, simplify, and condense bloated Codex Agent Skills while preserving
+their behavior.**
+
+SkillTidy is a **Codex Agent Skill** that reviews existing `SKILL.md` instructions
+and proposes clearer wording. Use it when a skill has grown hard to read or
+maintain. It looks for:
+
+- Repeated or redundant instructions and repeated context
+- Wordy explanations and vague wording
+- Conflicting or ambiguous rules
+- Potentially stale guidance
+- Excessive examples and other instruction bloat
+
+The goal is easier-to-read, more maintainable Agent Skills that keep important
+rules, exceptions, approvals, examples, exact outputs, and tool requirements
+intact. You see the full proposed text and diff before approving any changes.
+Unclear meaning stays for you to resolve, and example edits are suggested
+separately.
+
 Current version: **v1.3**
-
-SkillTidy is a Codex skill that reviews existing Agent Skills for repetition,
-wordy explanations, and conflicting rules. It proposes clearer wording and shows
-the full proposed text and diff before anything changes.
-
-Shortening instructions can accidentally remove an exception, change an exact
-output, or weaken an approval requirement. SkillTidy puts those details first.
-The goal is clearer instructions that keep the original requirements and leave
-unclear meaning for you to resolve.
 
 The installable bundle is just **six files** in
 [`skills/skilltidy/`](skills/skilltidy/README.md).
 You don't need a separate API key or Python to try it.
 
-## Quick start
+## Quick start: try a review
 
-1. Open this repository in Codex.
-2. Send the prompt below to review the included sample skill for label lists.
-3. Read the proposed text and diff before deciding whether to save or apply it.
+1. Download or clone this repository and open it as a trusted project in Codex.
+2. Paste the prompt below into a new conversation. It reviews an included sample
+   skill that turns label lists into JSON, without saving or changing any files.
+3. Read the review. If edits are proposed, compare the complete proposed text
+   (the candidate) and diff before deciding whether to approve a save or edit.
 
 ```text
 First read skills/skilltidy/SKILL.md by itself in a separate tool call
@@ -30,14 +42,17 @@ including relevant supporting context. Preserve its rules and examples.
 For proposed edits, show both the complete candidate and the complete unified diff in the conversation. Do not change or save any files.
 ```
 
-To review your own skill, replace the fixture path with a temporary copy of
-your skill file. You can also select a folder with one clear main skill, name a
-section, or paste instructions. Supporting files provide context. Proposed edits
-stay within the selected file or section.
+To review your own skill, replace `fixtures/structured-output/SKILL.input.md`
+with the path to a temporary copy of your `SKILL.md`, keeping its relevant
+supporting files alongside it. Stay in the trusted review project. You can also
+select a folder with one clear main skill, name a section, or paste instructions.
+Supporting files provide context. Proposed edits stay within the selected file
+or section.
 
-### Use or install the six-file bundle
+## Install SkillTidy in Codex
 
-Copy the whole `skills/skilltidy/` folder, keeping its structure:
+To make `$skilltidy` available in a project, copy the whole `skills/skilltidy/`
+folder, keeping all six files and their structure:
 
 ```text
 skilltidy/
@@ -49,18 +64,27 @@ skilltidy/
   scripts/measure.py
 ```
 
-Open that folder as a trusted project in Codex and follow its
-[standalone quick start](skills/skilltidy/README.md).
-To make the skill available in a project, copy it to a disposable project's
-`.agents/skills/skilltidy/`. Stop if that destination already exists,
-including a link. Start a fresh Codex conversation, select `$skilltidy`,
-and name the separate skill you want reviewed.
+1. Start with a disposable project you trust. Check that
+   `.agents/skills/skilltidy/` does not already exist, including as a link. Stop
+   if it does.
+2. Copy the folder there. Its main file should be at
+   `.agents/skills/skilltidy/SKILL.md`.
+3. Open that project in Codex, start a fresh conversation, select `$skilltidy`,
+   and name the separate skill you want reviewed. Ask for a preview without
+   saving or changing files for your first review.
+
+If the skill doesn't appear, restart Codex. See the
+[Codex skill documentation](https://learn.chatgpt.com/docs/build-skills)
+for local discovery details.
+
+You can also open the six-file folder directly as a trusted project in Codex
+and follow its [standalone quick start](skills/skilltidy/README.md).
 
 Tests and fixtures are for development and do not belong in the installable
 bundle. If you make a ZIP, include only the six-file folder. Creating a ZIP
 does not automatically exclude files listed in `.gitignore`.
 
-## What a review gives you
+## Understand the review
 
 | Result | Meaning |
 |---|---|
@@ -76,7 +100,7 @@ Saving a copy or applying an edit requires approval of the displayed proposal
 and exact destination. If the source changes, the proposal needs another review.
 Approval to save a copy leaves the original alone.
 
-## Three examples
+## Review examples
 
 These examples use only this project's [made-up test skills](fixtures/README.md).
 The first example comes from a recorded review. The other two show the expected
@@ -120,10 +144,12 @@ The [already-lean fixture](fixtures/already-lean/SKILL.input.md) gives this inst
 The expected result is `UNCHANGED`: no edits, no diff, and no request to apply
 anything. A review does not have to make a skill shorter to be useful.
 
-## Optional measurements
+## Compare word counts and approximate tokens
 
-The included helper reports word counts, approximate tokens, and a diff without
-changing files. Python 3.9+ is needed only for this helper and the automated tests.
+After reviewing a proposal, you can optionally compare its size with the
+original. The included helper reports word counts, approximate tokens, and a diff
+without changing files. Python 3.9+ is needed only for this helper and the
+automated tests.
 
 From the repository root, compare an original and an approved saved candidate:
 
