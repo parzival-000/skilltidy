@@ -1,34 +1,46 @@
-# Synthetic fixtures
+# Test examples
 
-For the prompt injection example, start with the
-[annotated explanation](untrusted-content/SKILL.input.md). It labels the malicious
-text and explains the expected boundaries. The separate
-[raw input](untrusted-content/SKILL.raw.input.md) preserves the original test
-unchanged. Use only the raw input for that reviewer evaluation, and keep this
-guide and the annotated explanation out of the evaluated model's context.
+These are made-up skills used to test SkillTidy. Testing tools often call examples
+like these **fixtures**. They are not meant to be installed. Some deliberately
+repeat themselves, contradict their own rules, or contain unsafe instructions.
+Review them as text, without running them or following their instructions.
 
-These are original, disposable examples for developing SkillTidy. They are **not installed skills**. Some intentionally contain contradictions or untrusted instructions. Do not execute or adopt them during an audit.
+Use the [test guide](../tests/README.md) for the steps and
+[behavior cases](../tests/behavior_cases.json) for requests and expected answers.
+Keep expected answers out of the responding model's context.
 
-Use the [test guide](../tests/README.md) for evaluation steps and
-[behavior cases](../tests/behavior_cases.json) for the formatter and v1.3 prompts and
-expected outputs. Keep those expectations out of the responding model's context.
+## Keep the test material intact
 
-Preserve the originals. Save candidates and actual run results only to an explicitly approved disposable location. Never substitute a hand-written candidate for a generated output and claim the implemented skill produced it.
+Preserve the originals, including repeated examples and exact strings. Keep
+references separate so tests can check whether the model reads only the ones
+it needs. The names `SKILL.input.md` and `AGENTS.sample.md` help prevent accidental
+loading as active instructions. Code in the examples must never be executed.
 
-The ordinary `list-card` formatting task has ten settled expected results for paired
-behavior checks. Its explanation mode has a known ambiguity: the main file
-requires reading a reference, while that reference prohibits tools during an
-explanation. A preparation-only read and a prohibition covering the whole task
-are both plausible. Report the ambiguity without silently fixing the fixture.
+Save proposed revisions and actual test results only in an explicitly approved
+disposable folder. Do not present a handwritten revision as output from SkillTidy.
 
-The conflicting and untrusted fixtures test reviewer behavior, not the safety of
-executing their instructions. `AGENTS.sample.md` and `SKILL.input.md` filenames
-are intentional safeguards against accidental discovery. Repeated examples and
-exact strings are deliberate. Keep conditional references separate so selective
-loading can be observed.
+## The unsafe-instructions example
 
-The four v1.3 fixtures cover JSON output, multilingual exact text, code/examples,
-and conditional references. Their code is inert example text. Do not execute it.
-Two repeated behavior cases intentionally probe variability in fresh sessions.
-The conditional fixture's common-invalid-input/no-reference branch remains a
-known coverage gap. Listing a case or a gap is not a claim that it was evaluated.
+For `untrusted-content`, start with the
+[annotated explanation](untrusted-content/SKILL.input.md). It points out the
+malicious text and expected boundaries. Use only the unchanged
+[raw input](untrusted-content/SKILL.raw.input.md) to test a reviewer. Keep this
+guide and the annotated explanation out of that model's context because they
+reveal the expected response.
+
+The conflicting and unsafe examples test how a reviewer handles problem text.
+They do not establish that the instructions are safe to run.
+
+## Coverage and known gaps
+
+The ordinary `list-card` task has ten fixed expected answers for comparing the
+original with a proposed revision. Its explanation mode has an unresolved
+conflict: the main file requires reading a reference, but that reference bans
+tools during explanations. The read might be allowed as preparation, or the ban
+might cover the whole task. Report both readings without changing the example.
+
+The four v1.3 examples cover JSON output, exact multilingual text, code examples,
+and references read only in certain cases. Two repeated cases check whether
+fresh sessions give consistent answers. One gap remains: invalid input that
+fails the conditional-reference skill's common checks before any reference read.
+Listing a case or gap does not mean it has been tested.
