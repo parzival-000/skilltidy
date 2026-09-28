@@ -17,8 +17,8 @@ RUNTIME_FILES = {
     "references/reporting.md", "scripts/measure.py",
 }
 FIXTURE_FILES = {
-    "README.md", "toy-list/SKILL.input.md", "toy-list/README.context.md",
-    "toy-list/references/format-guide.md", "conflicts/SKILL.input.md",
+    "README.md", "list-card/SKILL.input.md", "list-card/README.context.md",
+    "list-card/references/format-guide.md", "conflicts/SKILL.input.md",
     "preservation-traps/SKILL.input.md", "preservation-traps/AGENTS.sample.md",
     "already-lean/SKILL.input.md", "untrusted-content/SKILL.input.md",
     "untrusted-content/SKILL.raw.input.md",

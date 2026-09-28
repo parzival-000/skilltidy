@@ -43,7 +43,7 @@ equally. These are measured historical examples, not reduction targets.
 - Cross-platform behavior, real missing-Python and unreadable-file conditions,
   automatic skill selection, and every conditional branch remain unverified.
 - The conditional fixture's common-invalid-input/no-reference branch remains
-  a coverage gap. The toy-list explanation's reference-read/tool-ban conflict
+  a coverage gap. The list-card explanation's reference-read/tool-ban conflict
   remains unresolved.
 - Model evaluations, installation checks, and security scans were not rerun for
   this documentation update. Historical scanner evidence was incomplete and

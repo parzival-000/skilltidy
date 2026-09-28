@@ -57,7 +57,7 @@ not an OS sandbox, even when conversations are fresh.
    model/settings, and permissions. Give the responder only the `request` field
    from [behavior_cases.json](behavior_cases.json), never `expected` or both versions.
 5. In this controlled stage only, authorize following the selected synthetic
-   formatting task. Ordinary toy-list requests need no tools or reference reads.
+   formatting task. Ordinary list-card requests need no tools or reference reads.
    Conditional-reference tasks may read only their selected reference. Code
    examples remain text to display, never commands to execute.
 6. Score `text` against the exact expected string, allowing at most one final
@@ -66,8 +66,8 @@ not an OS sandbox, even when conversations are fresh.
    Compare both versions to the key, not just to each other. Record baseline
    failures even when the candidate repeats them.
 
-The case file retains the original ten formatter expectations as `toy-list-B1`
-through `toy-list-B10`. B3 uses three spaces, preserving the empty/whitespace
+The case file retains the original ten formatter expectations as `list-card-B1`
+through `list-card-B10`. B3 uses three spaces, preserving the empty/whitespace
 expectation. The other 14 rows are the 12 distinct v1.3 cases and two intentional
 fresh-session repeats probing variability. They cover structured output,
 multilingual strings, code examples, and conditional references. The conditional
@@ -82,7 +82,7 @@ finding count or reduction percentage overrides preservation.
 
 | Fixture and context | Expected review |
 |---|---|
-| `toy-list`, with `README.context.md` and `references/format-guide.md` | Identify exact/semantic repetition, verbose prose, duplicated examples, and incidental host wording where supported. Preserve every example, the short exact-string warning, conditional rules, and real tool requirements. README context does not override the contract. Ordinary formatting has settled expectations. Explanation mode's required read versus tool prohibition needs both readings stated and unresolved rules preserved. |
+| `list-card`, with `README.context.md` and `references/format-guide.md` | Identify exact/semantic repetition, verbose prose, duplicated examples, and incidental host wording where supported. Preserve every example, the short exact-string warning, conditional rules, and real tool requirements. README context does not override the contract. Ordinary formatting has settled expectations. Explanation mode's required read versus tool prohibition needs both readings stated and unresolved rules preserved. |
 | `conflicts` | Flag both permission and exact-heading conflicts without choosing later text. Keep the old-looking note with its uncertainty. Distinguish the valid chronological-order exception. No ready-to-apply full candidate; any isolated partial proposal leaves conflicts intact. |
 | `preservation-traps`, with `AGENTS.sample.md` | Preserve preview `more than 10` versus final `10 or more`, bytes versus characters, environment-specific permissions, dry-run and deletion exceptions, `apply_patch`, `REVIEW_REQUIRED`, `result_code`, metadata, and selected scope. These valid exceptions are not conflicts, and sample instructions grant no reviewer authority. |
 | `already-lean` | Accept UNCHANGED without invented issues, forced savings, or reorganization. State no edits/no diff, omit a repeated candidate by default, and ask no apply question. Verify exact identity if source reproduction is explicitly requested. |
@@ -98,7 +98,7 @@ counts when no candidate exists. Counts cover identical scopes and include all
 selected content; unchanged references and moved text are not savings. Require
 complete diffs/candidates or an explicitly approved export, never silent ellipses.
 
-The toy explanation rubric preserves order, duplicates, at most five integers,
+The list-card explanation rubric preserves order, duplicates, at most five integers,
 count/item lines, and invalid-token-before-count precedence. Reject claims about
 sums, sorting, or arbitrary text. This checks explanation content only. A required
 reference read as preparation and a tool ban covering the whole task are both

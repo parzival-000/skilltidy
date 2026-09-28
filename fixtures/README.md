@@ -15,7 +15,7 @@ expected outputs. Keep those expectations out of the responding model's context.
 
 Preserve the originals. Save candidates and actual run results only to an explicitly approved disposable location. Never substitute a hand-written candidate for a generated output and claim the implemented skill produced it.
 
-The ordinary `toy-list` formatting task has ten settled expected results for paired
+The ordinary `list-card` formatting task has ten settled expected results for paired
 behavior checks. Its explanation mode has a known ambiguity: the main file
 requires reading a reference, while that reference prohibits tools during an
 explanation. A preparation-only read and a prohibition covering the whole task
