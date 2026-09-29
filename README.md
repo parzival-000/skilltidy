@@ -3,27 +3,24 @@
 **Clean up, simplify, and condense bloated Codex Agent Skills while preserving
 their behavior.**
 
-SkillTidy is a **Codex Agent Skill** that reviews existing `SKILL.md` instructions
-and proposes clearer wording. Use it when a skill has grown hard to read or
-maintain. It looks for:
+SkillTidy reviews an existing `SKILL.md`, finds unnecessary complexity, and
+proposes a cleaner version without silently changing its rules. It looks for:
 
-- Repeated or redundant instructions and repeated context
-- Wordy explanations and vague wording
+- Repeated or redundant instructions
+- Wordy or vague guidance
 - Conflicting or ambiguous rules
 - Potentially stale guidance
-- Excessive examples and other instruction bloat
+- Excessive examples and instruction bloat
 
-The goal is easier-to-read, more maintainable Agent Skills that keep important
-rules, exceptions, approvals, examples, exact outputs, and tool requirements
-intact. You see the full proposed text and diff before approving any changes.
-Unclear meaning stays for you to resolve, and example edits are suggested
-separately.
+**How it works**
 
-Current version: **v1.3**
+- **Give it:** an existing Codex Agent Skill
+- **It checks:** bloat, repetition, ambiguity, conflicts, and stale guidance
+- **You get:** a proposed cleaner skill plus the complete diff
+- **It changes:** nothing automatically. You see the full proposal and diff before
+  approving a save or edit.
 
-The installable bundle is just **six files** in
-[`skills/skilltidy/`](skills/skilltidy/README.md).
-You don't need a separate API key or Python to try it.
+**Tested:** [36/36 automated checks passed, with recorded behavior comparisons.](tests/RESULTS.md)
 
 ## Quick start: try a review
 
@@ -50,6 +47,12 @@ Supporting files provide context. Proposed edits stay within the selected file
 or section.
 
 ## Install SkillTidy in Codex
+
+Current version: **v1.3**
+
+The installable bundle is just **six files** in
+[`skills/skilltidy/`](skills/skilltidy/README.md).
+You don't need a separate API key or Python to try it.
 
 To make `$skilltidy` available in a project, copy the whole `skills/skilltidy/`
 folder, keeping all six files and their structure:
@@ -85,6 +88,12 @@ bundle. If you make a ZIP, include only the six-file folder. Creating a ZIP
 does not automatically exclude files listed in `.gitignore`.
 
 ## Understand the review
+
+The goal is easier-to-read, more maintainable Agent Skills that keep important
+rules, exceptions, approvals, examples, exact outputs, and tool requirements
+intact. You see the full proposed text and diff before approving any changes.
+Unclear meaning stays for you to resolve, and example edits are suggested
+separately.
 
 | Result | Meaning |
 |---|---|
