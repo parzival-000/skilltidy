@@ -39,7 +39,7 @@ conflict: the main file requires reading a reference, but that reference bans
 tools during explanations. The read might be allowed as preparation, or the ban
 might cover the whole task. Report both readings without changing the example.
 
-The four v1.3 examples cover JSON output, exact multilingual text, code examples,
+The four examples cover JSON output, exact multilingual text, code examples,
 and references read only in certain cases. Two repeated cases check whether
 fresh sessions give consistent answers. One gap remains: invalid input that
 fails the conditional-reference skill's common checks before any reference read.

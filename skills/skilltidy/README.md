@@ -9,8 +9,6 @@ The goal is skills that are easier to read and maintain. You get the full propos
 text and diff before approving changes, with rules, exceptions, approvals, exact
 outputs, examples, and tool requirements taking priority over shortening.
 
-Current version: **v1.3**
-
 ## Quick start: review a skill
 
 1. Open this six-file folder as a trusted project in Codex. You don't need a
@@ -30,10 +28,9 @@ For proposed edits, show both the complete candidate and the complete unified di
 ```
 
 Here, this folder's `SKILL.md` contains the review instructions. The separate
-target path is the skill to review. Stay in the trusted review project. You can
-also select a section, a folder with one clear main skill, or pasted text.
-Supporting files provide context, while edits stay within the selected file or
-section.
+target path is the skill to review. Keep Codex open in this folder while reviewing.
+You can choose a file, a folder with one main skill, a section, or pasted text,
+and proposed edits are limited to what you select.
 
 **PROPOSED** means edits are ready for review. **REVIEW NEEDED** flags unresolved
 meaning. **UNCHANGED** means no edits are proposed. Examples, code, and metadata

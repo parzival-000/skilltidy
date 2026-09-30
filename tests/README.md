@@ -1,6 +1,6 @@
 # Testing SkillTidy
 
-Current version: **v1.3**. See [RESULTS.md](RESULTS.md) for the validation summary.
+See [RESULTS.md](RESULTS.md) for the validation summary.
 
 ## Run the automated tests
 
@@ -70,7 +70,7 @@ other files on the same computer.
 
 The ten original list-card expectations are `list-card-B1` through `list-card-B10`.
 B3 uses exactly three spaces for whitespace-only input. The other 14 rows are
-12 distinct v1.3 cases and two repeats checking consistency across fresh sessions.
+12 distinct cases and two repeats checking consistency across fresh sessions.
 They cover JSON output, exact multilingual text, code examples, and conditional
 references (files read only in certain cases).
 

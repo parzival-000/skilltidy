@@ -37,15 +37,11 @@ class Documentation(unittest.TestCase):
                     self.assertTrue(target.is_relative_to(ROOT), link)
                     self.assertTrue(target.is_file(), link)
 
-    def test_current_versions_agree(self):
-        versions = []
-        for source in [ROOT / "README.md", RUNTIME / "README.md",
-                       ROOT / "tests/README.md", ROOT / "tests/RESULTS.md"]:
-            match = re.search(r"Current version:\s*(?:\*\*)?(v\d+\.\d+)\b",
-                              source.read_text(encoding="utf-8"))
-            self.assertIsNotNone(match, str(source))
-            versions.append(match.group(1))
-        self.assertEqual(len(set(versions)), 1)
+    def test_maintained_docs_have_no_current_version_labels(self):
+        for source in DOCS:
+            with self.subTest(file=source.relative_to(ROOT)):
+                self.assertNotRegex(source.read_text(encoding="utf-8"),
+                                    r"(?i)\bCurrent\s+version\s*:")
 
     def test_quick_start_paths_resolve_from_documented_folders(self):
         for source, directory in [(ROOT / "README.md", ROOT), (RUNTIME / "README.md", RUNTIME)]:

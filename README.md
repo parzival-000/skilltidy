@@ -41,14 +41,11 @@ For proposed edits, show both the complete candidate and the complete unified di
 
 To review your own skill, replace `fixtures/structured-output/SKILL.input.md`
 with the path to a temporary copy of your `SKILL.md`, keeping its relevant
-supporting files alongside it. Stay in the trusted review project. You can also
-select a folder with one clear main skill, name a section, or paste instructions.
-Supporting files provide context. Proposed edits stay within the selected file
-or section.
+supporting files alongside it. Keep Codex open in this project while reviewing.
+You can choose a file, a folder with one main skill, a section, or pasted
+instructions, and proposed edits are limited to what you select.
 
 ## Install SkillTidy in Codex
-
-Current version: **v1.3**
 
 The installable bundle is just **six files** in
 [`skills/skilltidy/`](skills/skilltidy/README.md).
@@ -117,7 +114,7 @@ review outcomes described in the [test guide](tests/README.md).
 
 ### Wordy explanation → PROPOSED
 
-A v1.3 review of the
+A recorded review of the
 [label-list fixture](fixtures/structured-output/SKILL.input.md)
 included this edit:
 
@@ -175,7 +172,7 @@ without Python.
 ## Testing and limitations
 
 The documented automated checks passed **36/36 tests** in both the reviewed
-copy and a clean export. Historical v1.3 behavior checks recorded 14 matched
+copy and a clean export. Historical behavior checks recorded 14 matched
 original/candidate pairs with 28 passing responses, including two repeats.
 See the [test guide](tests/README.md) and [validation summary](tests/RESULTS.md)
 for scope and limitations.

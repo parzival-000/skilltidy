@@ -1,32 +1,32 @@
 # Validation summary
 
-Current version: **v1.3**
-
 ## Automated checks
 
-The local suite passed **36/36 tests** in the proposed documentation update and
-in a clean export, with no failures or skips. It checks the measurement helper,
-packaging, metadata, fixture layout, documentation links, and helper examples.
-See the [test guide](README.md) for the command and coverage details.
+During an earlier documentation update, the local suite passed **36/36 tests**
+in both the reviewed copy and a clean export, with no failures or skips. It checks
+the measurement helper, packaging, metadata, fixture layout, documentation links,
+and helper examples.
+The [test guide](README.md) has the command and coverage details.
 
 ## Historical behavior checks
 
-Earlier v1.3 evaluations recorded **14 matched original/candidate pairs with
-28 passing responses**, including two repeats. These covered structured output,
+Earlier evaluations recorded **14 matched original/candidate pairs with
+28 passing responses**, including two repeats, covering structured output,
 multilingual text, code examples, and conditional references. Some responses
 were reused only after the original, candidate, and context hashes matched.
-These are historical results for specific inputs, not fresh model evaluations
-of this documentation update.
+These results apply to those specific historical inputs. Model evaluations
+were not rerun for this documentation update.
 
 The structured-output example linked from the repository README went from
-**401 to 365 words** across two edits. Its reviewed candidate preserved the
+**401 to 365 words** across two edits, and its reviewed candidate preserved the
 validation rules, JSON format, and example. Fewer words alone do not establish
 equivalent behavior.
 
 ### Generated candidates
 
-Whole-file words include metadata and examples; unchanged references are excluded
-equally. These are measured historical examples, not reduction targets.
+Word counts cover the whole file, including metadata and examples, and exclude
+unchanged references from both the original and candidate. The table records
+historical measurements, not reduction targets.
 
 | Fixture | Original | Candidate | Fewer words |
 |---|---:|---:|---:|
@@ -42,13 +42,13 @@ equally. These are measured historical examples, not reduction targets.
   but did not retest every workflow after every revision.
 - Cross-platform behavior, real missing-Python and unreadable-file conditions,
   automatic skill selection, and every conditional branch remain unverified.
-- The conditional fixture's common-invalid-input/no-reference branch remains
-  a coverage gap. The list-card explanation's reference-read/tool-ban conflict
-  remains unresolved.
-- Model evaluations, installation checks, and security scans were not rerun for
-  this documentation update. Historical scanner evidence was incomplete and
-  is not security certification.
+- The conditional fixture's common-invalid-input/no-reference branch is still
+  a coverage gap, and the list-card explanation's reference-read/tool-ban
+  conflict remains unresolved.
+- Model evaluations, installation checks, and security scans were not rerun
+  for this documentation update. Historical scanner evidence was incomplete
+  and does not establish security certification.
 
-These checks do not guarantee equivalent behavior on every task. Test changes
-on representative tasks before relying on them. Detailed development chronology
-and machine-specific information are omitted from this public summary.
+These checks do not guarantee equivalent behavior on every task, so test changes
+on representative tasks before relying on them. This public summary omits
+detailed development chronology and machine-specific information.
