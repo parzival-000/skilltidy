@@ -1,9 +1,9 @@
 # SkillTidy
 
-SkillTidy is a **Codex Agent Skill** for cleaning up, simplifying, and condensing
-existing `SKILL.md` instructions while preserving their behavior. It looks for
-repeated instructions, wordy explanations, conflicting or ambiguous rules,
-repeated context, potentially stale guidance, vague wording, and excessive examples.
+SkillTidy is a **Codex Agent Skill** for simplifying existing `SKILL.md`
+instructions while preserving their behavior. It looks for repeated instructions,
+wordy explanations, conflicting or ambiguous rules, repeated context, potentially
+stale guidance, vague wording, and excessive examples.
 
 The goal is skills that are easier to read and maintain. You get the full proposed
 text and diff before approving changes, with rules, exceptions, approvals, exact

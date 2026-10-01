@@ -2,7 +2,7 @@
 
 ## Automated checks
 
-During an earlier documentation update, the local suite passed **36/36 tests**
+Recorded automated runs passed **36/36 tests**
 in both the reviewed copy and a clean export, with no failures or skips. It checks
 the measurement helper, packaging, metadata, fixture layout, documentation links,
 and helper examples.
@@ -15,7 +15,7 @@ Earlier evaluations recorded **14 matched original/candidate pairs with
 multilingual text, code examples, and conditional references. Some responses
 were reused only after the original, candidate, and context hashes matched.
 These results apply to those specific historical inputs. Model evaluations
-were not rerun for this documentation update.
+were not rerun during the later documentation updates.
 
 The structured-output example linked from the repository README went from
 **401 to 365 words** across two edits, and its reviewed candidate preserved the
@@ -43,11 +43,13 @@ historical measurements, not reduction targets.
 - Cross-platform behavior, real missing-Python and unreadable-file conditions,
   automatic skill selection, and every conditional branch remain unverified.
 - The conditional fixture's common-invalid-input/no-reference branch is still
-  a coverage gap, and the list-card explanation's reference-read/tool-ban
-  conflict remains unresolved.
-- Model evaluations, installation checks, and security scans were not rerun
-  for this documentation update. Historical scanner evidence was incomplete
-  and does not establish security certification.
+  a coverage gap.
+- The list-card fixture deliberately retains the explanation's unresolved
+  reference-read/tool-ban ambiguity. It tests how reviewers report unclear
+  rules. It is not a current SkillTidy runtime defect.
+- Later documentation updates did not rerun model evaluations, installation
+  checks, or security scans. Historical scanner evidence was incomplete and
+  does not establish security certification.
 
 These checks do not guarantee equivalent behavior on every task, so test changes
 on representative tasks before relying on them. This public summary omits

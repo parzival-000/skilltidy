@@ -34,10 +34,13 @@ They do not establish that the instructions are safe to run.
 ## Coverage and known gaps
 
 The ordinary `list-card` task has ten fixed expected answers for comparing the
-original with a proposed revision. Its explanation mode has an unresolved
-conflict: the main file requires reading a reference, but that reference bans
-tools during explanations. The read might be allowed as preparation, or the ban
-might cover the whole task. Report both readings without changing the example.
+original with a proposed revision. Its explanation mode deliberately retains an
+unresolved conflict: the main file requires reading a reference, but that
+reference bans tools during explanations. The read might be allowed as
+preparation, or the ban might cover the whole task. Report both readings without
+changing the example.
+This ambiguity tests whether reviewers flag unclear rules. It is not a current
+SkillTidy runtime defect.
 
 The four examples cover JSON output, exact multilingual text, code examples,
 and references read only in certain cases. Two repeated cases check whether

@@ -1,7 +1,6 @@
 # SkillTidy
 
-**Clean up, simplify, and condense bloated Codex Agent Skills while preserving
-their behavior.**
+**Simplify bloated Codex Agent Skills while preserving their behavior.**
 
 SkillTidy reviews an existing `SKILL.md`, finds unnecessary complexity, and
 proposes a cleaner version without silently changing its rules. It looks for:
@@ -15,7 +14,6 @@ proposes a cleaner version without silently changing its rules. It looks for:
 **How it works**
 
 - **Give it:** an existing Codex Agent Skill
-- **It checks:** bloat, repetition, ambiguity, conflicts, and stale guidance
 - **You get:** a proposed cleaner skill plus the complete diff
 - **It changes:** nothing automatically. You see the full proposal and diff before
   approving a save or edit.

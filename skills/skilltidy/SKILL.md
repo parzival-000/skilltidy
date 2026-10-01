@@ -7,7 +7,7 @@ description: Review existing Agent Skill instructions for repetition, wordiness,
 
 Clean up bloated Agent Skills while preserving their behavior.
 
-Use Balanced cleanup with a conservative safety bias. Preserve behavior and rules,
+Use a balanced, conservative approach to cleanup. Preserve behavior and rules,
 improve clarity, then remove genuine redundancy. Keep effective wording, voice,
 emphasis, headings, and order. There is no minimum reduction target.
 
