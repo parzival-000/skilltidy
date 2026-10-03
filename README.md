@@ -3,7 +3,7 @@
 **Simplify bloated Codex Agent Skills while preserving their behavior.**
 
 SkillTidy reviews an existing `SKILL.md`, finds unnecessary complexity, and
-proposes a cleaner version without silently changing its rules. It looks for:
+proposes a cleaner version without changing its rules. It looks for:
 
 - Repeated or redundant instructions
 - Wordy or vague guidance
@@ -18,7 +18,7 @@ proposes a cleaner version without silently changing its rules. It looks for:
 - **It changes:** nothing automatically. You see the full proposal and diff before
   approving a save or edit.
 
-**Tested:** [36/36 automated checks passed, with recorded behavior comparisons.](tests/RESULTS.md)
+**Tested:** [36/36 automated checks passed.](tests/RESULTS.md)
 
 ## Quick start: try a review
 
