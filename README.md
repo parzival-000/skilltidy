@@ -1,5 +1,7 @@
 # SkillTidy
 
+[![Automated checks](https://github.com/parzival-000/skilltidy/actions/workflows/checks.yml/badge.svg?branch=main&event=push)](https://github.com/parzival-000/skilltidy/actions/workflows/checks.yml)
+
 **Simplify bloated Codex Agent Skills while preserving their behavior.**
 
 SkillTidy reviews an existing `SKILL.md`, finds unnecessary complexity, and
