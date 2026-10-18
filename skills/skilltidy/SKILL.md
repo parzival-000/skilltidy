@@ -18,6 +18,8 @@ emphasis, headings, and order. There is no minimum reduction target.
   headings, or unclear boundaries make the selection ambiguous.
 - Read the full main file and relevant supporting text. Propose changes only to
   the selected main file or span. Pasted text has no inferred disk destination.
+- Do not fully condense linked reference documents; preserve their useful detail.
+  Flag only major issues, proposing careful, targeted cuts only within the selected scope.
 - State the exact scope, supporting context read, and skipped or unavailable
   context. Missing references block changes that depend on them, not necessarily
   unrelated cleanup. Do not claim a complete folder review from one file.
