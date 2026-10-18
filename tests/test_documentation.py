@@ -11,7 +11,8 @@ import uuid
 ROOT = Path(__file__).resolve().parents[1]
 RUNTIME = ROOT / "skills/skilltidy"
 DOCS = [
-    ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "fixtures/README.md",
+    ROOT / "README.md", ROOT / "AGENTS.md", ROOT / "CONTRIBUTING.md",
+    ROOT / "fixtures/README.md",
     ROOT / "tests/README.md", ROOT / "tests/RESULTS.md",
     ROOT / "fixtures/untrusted-content/SKILL.input.md",
 ] + sorted(RUNTIME.rglob("*.md"))

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and general feedback
+    url: https://github.com/parzival-000/skilltidy/discussions
+    about: Ask how to use SkillTidy or share feedback.

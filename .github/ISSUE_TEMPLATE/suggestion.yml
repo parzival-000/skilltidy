@@ -1,0 +1,27 @@
+name: Suggest an improvement
+description: Tell us what would make SkillTidy more useful.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Keep examples made-up and leave private skill text, credentials, and
+        personal information out of your suggestion.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to improve?
+      description: Describe the task or difficulty behind your suggestion.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Your suggestion
+      description: Explain the change and how it would help.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: A small example
+      description: If useful, show how you would use it with made-up input.

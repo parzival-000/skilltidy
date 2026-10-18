@@ -20,6 +20,29 @@ proposes a cleaner version without changing its rules. It looks for:
 
 **Tested:** [36/36 automated checks passed.](tests/RESULTS.md)
 
+[Try a review](#quick-start-try-a-review) |
+[Install](#install-skilltidy-in-codex) |
+[Report a problem](https://github.com/parzival-000/skilltidy/issues/new/choose) |
+[Contribute](CONTRIBUTING.md)
+
+## Example: a careful cleanup
+
+A recorded review of the included
+[label-list sample](fixtures/structured-output/SKILL.input.md)
+produced this edit:
+
+```diff
+-Turn a small label list into a predictable JSON result. The result has a fixed
+-shape so another program can read it. Use that same fixed shape for every
+-request, since a consistent result is easier for the receiving program to read.
++Turn a small label list into a predictable JSON result. Use the same fixed shape
++for every request so another program can read it.
+```
+
+The full candidate preserved the validation rules, JSON format, and example.
+Across two edits, it went from **401 to 365 words**. See the
+[validation summary](tests/RESULTS.md) for the recorded result and limitations.
+
 ## Quick start: try a review
 
 1. Download or clone this repository and open it as a trusted project in Codex.
@@ -107,26 +130,8 @@ Approval to save a copy leaves the original alone.
 ## Review examples
 
 These examples use only this project's [made-up test skills](fixtures/README.md).
-The first example comes from a recorded review. The other two show the expected
-review outcomes described in the [test guide](tests/README.md).
-
-### Wordy explanation → PROPOSED
-
-A recorded review of the
-[label-list fixture](fixtures/structured-output/SKILL.input.md)
-included this edit:
-
-```diff
--Turn a small label list into a predictable JSON result. The result has a fixed
--shape so another program can read it. Use that same fixed shape for every
--request, since a consistent result is easier for the receiving program to read.
-+Turn a small label list into a predictable JSON result. Use the same fixed shape
-+for every request so another program can read it.
-```
-
-The full candidate preserved the validation rules, JSON format, and example.
-Across two edits, it went from **401 to 365 words**. See the
-[validation summary](tests/RESULTS.md) for the recorded result and limitations.
+They show the expected review outcomes described in the
+[test guide](tests/README.md).
 
 ### Conflicting rules → REVIEW NEEDED
 
@@ -185,16 +190,22 @@ and are not a security sandbox.
 
 ## Help and development
 
-For maintenance, start with [AGENTS.md](AGENTS.md) and the
-[test guide](tests/README.md). Run the automated suite from the repository root:
+For fixes, suggestions, or pull requests, start with
+[Contributing](CONTRIBUTING.md). Questions and general feedback are welcome in
+[Discussions](https://github.com/parzival-000/skilltidy/discussions).
+
+Run the automated suite from the repository root:
 
 ```powershell
 py -3 -B -m unittest discover -s tests -v
 ```
 
 Runtime changes also need focused behavior checks for the affected requirements.
+GitHub Actions runs the automated suite on Windows and Linux, using Python 3.9
+and the latest stable Python 3. These checks cover the helper, packaging, and
+documentation. They do not run model evaluations.
 
-Found a problem? [Open an issue](https://github.com/parzival-000/skilltidy/issues)
+Found a problem? [Report it](https://github.com/parzival-000/skilltidy/issues/new/choose)
 with a small made-up example, what you expected, what happened, and your model
 and settings if known. Leave private skill text out of shared reports.
 

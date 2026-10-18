@@ -1,0 +1,39 @@
+name: Report a problem
+description: Help reproduce an incorrect review, broken diff, or setup problem.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve SkillTidy. Use a small made-up example and
+        leave private skill text, credentials, and personal information out of
+        inputs, responses, diffs, and screenshots.
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps and a small example
+      description: Include the prompt and enough made-up input to reproduce the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+      description: Include the relevant response or diff if you can share it safely.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Codex, model, and operating system
+      description: Include versions and settings if known. It is fine to leave this blank.
+  - type: input
+    id: revision
+    attributes:
+      label: SkillTidy revision
+      description: A commit or download date, if known.
