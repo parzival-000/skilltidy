@@ -17,10 +17,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Keep Python 3.9 available through Ubuntu's latest-image rollover.
-        os: [ubuntu-24.04, windows-latest]
-        # Check the documented minimum and the latest stable Python 3.
-        python-version: ["3.9", "3.x"]
+        # Split the Python range across platforms to keep CI to two jobs.
+        include:
+          - os: ubuntu-24.04
+            python-version: "3.x"
+          - os: windows-latest
+            python-version: "3.9"
     steps:
       - name: Check out the repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1

@@ -34,7 +34,8 @@ py -3 -B -m unittest discover -s tests -v
 
 On Linux or macOS, use `python3 -B -m unittest discover -s tests -v`.
 The suite needs no extra packages or model access. GitHub Actions runs the same
-checks on Windows and Linux with Python 3.9 and the latest stable Python 3.
+checks in two jobs: Windows with Python 3.9, and Linux with the latest stable
+Python 3.
 
 These checks cover the helper, packaging, and documentation. Changes to skill
 instructions also need focused behavior checks for the affected rules, as

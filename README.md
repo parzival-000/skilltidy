@@ -203,9 +203,9 @@ py -3 -B -m unittest discover -s tests -v
 ```
 
 Runtime changes also need focused behavior checks for the affected requirements.
-GitHub Actions runs the automated suite on Windows and Linux, using Python 3.9
-and the latest stable Python 3. These checks cover the helper, packaging, and
-documentation. They do not run model evaluations.
+GitHub Actions runs two jobs: Windows with Python 3.9, and Linux with the latest
+stable Python 3. These checks cover the helper, packaging, and documentation.
+They do not run model evaluations.
 
 Found a problem? [Report it](https://github.com/parzival-000/skilltidy/issues/new/choose)
 with a small made-up example, what you expected, what happened, and your model
